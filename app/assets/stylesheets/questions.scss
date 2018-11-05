@@ -1,3 +1,136 @@
 // Place all the styles related to the questions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Montserrat:400,400i,800,800i');
+
+$primary-color: #F8E3DC;
+$secondary-color:#565857;
+$accent-color:#734B5E;
+
+$primary-font: "Montserrat", sans-serif;
+$accent-font: "Inconsolata", monospace;
+
+$weight-bold: 800;
+$weight-normal: 400;
+
+* {
+  margin: 0;
+  font-family: $primary-font;
+}
+
+body {
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+  font-family: $accent-font;
+}
+
+#ask {
+  background: $secondary-color;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    color: $primary-color;
+    font-family: $primary-font;
+    text-align: center;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    font-weight: $weight-bold;
+    margin-bottom: 20px;
+    font-size: 3.3rem;
+  }
+
+  h4 {
+    font-weight: $weight-normal;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+
+  form {
+    width: 40vw;
+  }
+
+  input {
+    margin: 10px auto;
+    display: block;
+    width: 100%;
+    height: 32px;
+  }
+
+  input[type="text"] {
+    background: $secondary-color;
+    border: none;
+    border-bottom: 4px solid $primary-color;
+  }
+
+  input[type="text"]:active,
+  input[type="text"]:focus {
+    outline: none;
+    outline-offset: 0px;
+    color: white;
+    font-weight: $weight-bold;
+    text-align: center;
+    font-family: $accent-font;
+    border-bottom: 2px solid white;
+    font-size: 2rem;
+  }
+
+  ::placeholder {
+    color: $primary-color;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  input[type="submit"] {
+    height: 30px;
+    background: white;
+    border: none;
+    &:hover {
+      background: $accent-color;
+      color: white;
+    }
+
+  }
+}
+
+#answer {
+  height: 100vh;
+  background: $primary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-align: right;
+    font-style: italic;
+  }
+
+  & > div {
+    margin: 10px auto;
+  }
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+
+  a {
+    color: $accent-color;
+    font-size: 1rem;
+  }
+}

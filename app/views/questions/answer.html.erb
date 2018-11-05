@@ -1,8 +1,24 @@
-<h3><%= params["question"] %></h3>
-<p>you</p>
+<div id="answer">
 
-<h3><%= @answer %></h3>
-<p>your coach</p>
+  <div class="question">
 
+    <h3><%= params["question"] %></h3>
+    <p>you</p>
 
-<%= link_to('ask another question', '/ask') %>
+  </div>
+
+  <div class="coach-answer">
+
+    <h3><%= @answer %></h3>
+    <p>your coach</p>
+
+  </div>
+
+</div>
+
+<div id="footer">
+
+  <%= link_to('ask another question', '/ask') %>
+
+</div>
+
